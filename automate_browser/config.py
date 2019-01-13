@@ -1,0 +1,2 @@
+USERNAME = "Try yourself"
+PASSWORD = "123456"
