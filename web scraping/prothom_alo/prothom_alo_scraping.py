@@ -6,13 +6,13 @@ __status__     = "Education"
 
 """
 
-from urllib.request import urlopen
+import requests
 from bs4 import BeautifulSoup
 
 
 url  = "https://www.prothomalo.com"
-html = urlopen(url)
-soup = BeautifulSoup(html.read(), 'html.parser')
+html = requests.get(url)
+soup = BeautifulSoup(html.content, 'html.parser')
 
 # Full page download
 with open('FirstPage.html', 'w', encoding='UTF-8') as fp:
